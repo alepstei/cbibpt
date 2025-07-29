@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Congregation B'nai Israel - Bridgeport, CT</title>
+  <title>Congregation B'nai Israel</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -15,10 +15,9 @@
     .top-bar {
       background-color: #003366;
       color: white;
-      display: flex;
-      justify-content: space-between;
       padding: 0.5rem 1rem;
       font-size: 0.9rem;
+      text-align: left;
     }
     .header {
       background-color: #f5f5f5;
@@ -33,7 +32,7 @@
       align-items: center;
     }
     .logo img {
-      height: 50px;
+      height: 60px;
       margin-right: 1rem;
     }
     .logo-text {
@@ -72,61 +71,69 @@
     .main-nav a:hover {
       text-decoration: underline;
     }
-    section {
+    .carousel {
+      overflow: hidden;
+      width: 100%;
+      background-color: #eaeaea;
+      padding: 1rem 0;
+    }
+    .carousel-track {
+      display: flex;
+      animation: scroll 30s linear infinite;
+    }
+    .carousel-track img {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 1rem;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       padding: 2rem;
-      max-width: 1000px;
+      border-bottom: 1px solid #ccc;
+      max-width: 1200px;
       margin: auto;
     }
-    section h2 {
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+      background-color: #f0f4f8;
+    }
+    .section img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      margin: 1rem;
+    }
+    .section-content {
+      flex: 1;
+      min-width: 300px;
+      padding: 1rem;
+    }
+    .section h2 {
       color: #0055a5;
-    }
-    .calendar {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 1px;
-      background-color: #ccc;
-      margin-top: 1rem;
-    }
-    .calendar div {
-      background-color: white;
-      padding: 1rem;
-      min-height: 80px;
-      border: 1px solid #ccc;
-    }
-    .calendar .day-header {
-      background-color: #0055a5;
-      color: white;
-      font-weight: bold;
-      text-align: center;
-    }
-    .calendar .event {
-      margin-top: 0.5rem;
-      font-size: 0.85rem;
-      background-color: #e0f0ff;
-      padding: 0.25rem;
-      border-radius: 4px;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 1rem;
     }
   </style>
 </head>
 <body>
 
 <div class="top-bar">
-  <div>4th of Av, 5785</div>
-  <div>(203) 555-1234</div>
+  <div>203-336-1858 | info@cbibpt.org</div>
 </div>
 
 <div class="header">
   <div class="logo">
-    <img src="logo-placeholder.png" alt="Logo" />
+    <img src="cbi_logo.png" alt="Congregation B'nai Israel Logo" />
     <div>
       <div class="logo-text">Congregation B'nai Israel</div>
-      <div class="tagline">Bridgeport, CT Reform Temple</div>
+      <div class="tagline">Inspiring Lives of Meaning</div>
     </div>
   </div>
   <div class="nav-buttons">
@@ -148,58 +155,61 @@
   <a href="#">🔍</a>
 </div>
 
-<section id="events-calendar">
-  <h2>Events Calendar</h2>
-  <div class="calendar">
-    <div class="day-header">Sun</div>
-    <div class="day-header">Mon</div>
-    <div class="day-header">Tue</div>
-    <div class="day-header">Wed</div>
-    <div class="day-header">Thu</div>
-    <div class="day-header">Fri</div>
-    <div class="day-header">Sat</div>
-
-    <div></div><div></div><div>1<div class="event">Torah Study</div></div><div>2</div><div>3</div><div>4<div class="event">Shabbat Service</div></div><div>5</div>
-    <div>6</div><div>7</div><div>8</div><div>9<div class="event">Blood Drive</div></div><div>10</div><div>11<div class="event">Family Shabbat</div></div><div>12</div>
-    <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div>
-    <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div>
-    <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div></div><div></div>
+<div class="carousel">
+  <div class="carousel-track">
+    <img src="image1.jpg" alt="Slide 1" />
+    <img src="image2.jpg" alt="Slide 2" />
+    <img src="image3.jpg" alt="Slide 3" />
   </div>
-</section>
+</div>
 
-<section id="welcome">
-  <h2>Welcome</h2>
-  <p>Welcome to Congregation B'nai Israel, a vibrant Reform Jewish community in Bridgeport, Connecticut. We are committed to spiritual growth, lifelong learning, and social justice. Join us in celebrating Jewish life through worship, education, and community engagement.</p>
-</section>
+<div class="section" id="welcome">
+  <img src="welcome_image.jpg" alt="Welcome Image" />
+  <div class="section-content">
+    <h2>Welcome</h2>
+    <p>Welcome to Congregation B'nai Israel, a vibrant Reform Jewish community in Bridgeport, Connecticut. We are committed to spiritual growth, lifelong learning, and social justice. Join us in celebrating Jewish life through worship, education, and community engagement.</p>
+  </div>
+</div>
 
-<section id="jewish-life">
-  <h2>Jewish Life & Learning</h2>
-  <p>From our Bonim Preschool to adult education programs, we offer opportunities for learning and connection at every stage of life. Our youth programs, Hebrew school, and high school initiatives foster a strong Jewish identity and community involvement.</p>
-</section>
+<div class="section" id="jewish-life">
+  <img src="jewish_life_image.jpg" alt="Jewish Life Image" />
+  <div class="section-content">
+    <h2>Jewish Life & Learning</h2>
+    <p>From our Bonim Preschool to adult education programs, we offer opportunities for learning and connection at every stage of life. Our youth programs, Hebrew school, and high school initiatives foster a strong Jewish identity and community involvement.</p>
+  </div>
+</div>
 
-<section id="tikkun-olam">
-  <h2>Tikkun Olam</h2>
-  <p>We are deeply committed to repairing the world through acts of social justice and community service. Join our efforts in food drives, blood donations, refugee support, and interfaith partnerships that make a meaningful impact locally and globally.</p>
-</section>
+<div class="section" id="tikkun-olam">
+  <img src="placeholder-tikkun.jpg" alt="Tikkun Olam Image" />
+  <div class="section-content">
+    <h2>Tikkun Olam</h2>
+    <p>We are deeply committed to repairing the world through acts of social justice and community service. Join our efforts in food drives, blood donations, refugee support, and interfaith partnerships that make a meaningful impact locally and globally.</p>
+  </div>
+</div>
 
-<section id="clergy">
-  <h2>Clergy & Staff</h2>
-  <p>Meet our dedicated clergy and staff, including Rabbi Evan Schultz and Rabbi Sarah Marion. Their leadership, compassion, and wisdom guide our congregation in worship, education, and community building.</p>
-</section>
+<div class="section" id="clergy">
+  <img src="placeholder-clergy.jpg" alt="Clergy Image" />
+  <div class="section-content">
+    <h2>Clergy & Staff</h2>
+    <p>Meet our dedicated clergy and staff, including Rabbi Evan Schultz and Rabbi Sarah Marion. Their leadership, compassion, and wisdom guide our congregation in worship, education, and community building.</p>
+  </div>
+</div>
 
-<section id="events">
-  <h2>Events</h2>
-  <p>Stay connected with our calendar of events, including Shabbat services, holiday celebrations, film series, and educational workshops. There’s always something happening at Congregation B'nai Israel.</p>
-</section>
+<div class="section" id="events">
+  <img src="placeholder-events.jpg" alt="Events Image" />
+  <div class="section-content">
+    <h2>Events</h2>
+    <p>Stay connected with our calendar of events, including Shabbat services, holiday celebrations, film series, and educational workshops. There’s always something happening at Congregation B'nai Israel.</p>
+  </div>
+</div>
 
-<section id="donate">
-  <h2>Donate</h2>
-  <p>Your support helps sustain our programs, services, and community outreach. Make a donation online or learn more about membership opportunities and ways to give.</p>
-</section>
-
-<footer>
-  <p>&copy; 2025 Congregation B'nai Israel. All rights reserved.</p>
-</footer>
+<div class="section" id="donate">
+  <img src="placeholder-donate.jpg" alt="Donate Image" />
+  <div class="section-content">
+    <h2>Donate</h2>
+    <p>Your support helps sustain our programs, services, and community outreach. Make a donation online or learn more about membership opportunities and ways to give.</p>
+  </div>
+</div>
 
 </body>
 </html>
